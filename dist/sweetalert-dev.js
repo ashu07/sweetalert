@@ -226,7 +226,7 @@ sweetAlert.close = swal.close = function () {
 
   // Reset the page to its previous state
   window.onkeydown = previousWindowKeyDown;
-  if (window.previousActiveElement) {
+  if (window.previousActiveElement && typeof window.previousActiveElement.focus == "function") {
     window.previousActiveElement.focus();
   }
   lastFocusedButton = undefined;
